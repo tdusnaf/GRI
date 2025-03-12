@@ -1,0 +1,1 @@
+using GRIStatus as service from '../../srv/service';

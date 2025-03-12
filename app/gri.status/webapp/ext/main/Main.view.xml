@@ -1,0 +1,51 @@
+<mvc:View 
+    xmlns:core="sap.ui.core" 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns="sap.m" 
+    xmlns:macros="sap.fe.macros" 
+    xmlns:html="http://www.w3.org/1999/xhtml" 
+    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" 
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    controllerName="gri.status.ext.main.Main">
+
+    <Page id="Main" title="{i18n&gt;MainTitle}">
+        
+        <VBox id="a" fitContainer="true">
+            <smartfilterbar:SmartFilterBar 
+                id="smartFilterBar" 
+                entitySet="Status" 
+                persistencyKey="SmartFilter_Explored" 
+                enableBasicSearch="true">
+
+                <smartfilterbar:layoutData>
+                    <FlexItemData id="ab" shrinkFactor="0" />
+                </smartfilterbar:layoutData>
+            </smartfilterbar:SmartFilterBar>
+
+            <smartTable:SmartTable 
+                id="LineItemsSmartTable" 
+                entitySet="Status" 
+                smartFilterId="smartFilterBar" 
+                tableType="Table"
+                enableExport="true"
+                beforeExport="onBeforeExport"
+                useVariantManagement="true"
+                useTablePersonalisation="true"
+                header="Aerolineas"
+                showRowCount="true"
+                persistencyKey="smartKey"
+                enableAutoBinding="true"
+                showFullScreenButton="true"
+                enableAutoColumnWidth="true"
+                app:useSmartToggle="true"
+                >                
+
+                <smartTable:layoutData>
+                    <FlexItemData id="ae" growFactor="1" baseSize="0%" />
+                </smartTable:layoutData>
+
+            </smartTable:SmartTable>
+        </VBox>
+    </Page>
+</mvc:View>
