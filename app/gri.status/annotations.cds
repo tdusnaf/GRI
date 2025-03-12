@@ -1,33 +1,55 @@
 using GRIStatus as service from '../../srv/service';
-annotate service.Status_Text with @(
-    UI.SelectionFields #filterBarMacro : [
-    ]
-);
 
 annotate service.Status with @(
-    UI.LineItem #tableMacro : [
+    UI.FieldGroup #GeneratedGroup :{
+        $Type: 'UI.FieldGroupType',
+        Data : [
+            {
+                $Type : 'UI.DataField',
+                Label : '{i18n>Estado}',
+                Value : ID,
+            }
+        ],
+    },
+
+     UI.Facets : [
         {
-            $Type : 'UI.DataField',
-            Value : Status_Text.StatusName,
-            Label : 'StatusName',
+            $Type : 'UI.ReferenceFacet',
+            ID : 'GeneratedFacet1',
+            Label : 'General Information',
+            Target : '@UI.FieldGroup#GeneratedGroup',
         },
         {
-            $Type : 'UI.DataField',
-            Value : Status_Text.status_ID,
-            Label : 'status_ID',
-        },
-        {
-            $Type : 'UI.DataField',
-            Value : Status_Text.LangCode_code,
-            Label : 'LangCode_code',
+            $Type : 'UI.ReferenceFacet',
+            Label : 'Texts',
+            ID : 'Texts',
+            Target : 'Status_Text/@UI.LineItem#Texts',
         },
     ],
-    UI.LineItem #tableMacro1 : [
+    UI.LineItem : [
+        {
+            $Type : 'UI.DataField',
+            Value : ID,
+            Label : 'ID',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : Status_Text. ,
+            Label : '{i18n>Nombre}',
+        },
     ],
+    UI.SelectionFields : [
+        Status_Text.LangCode_code,
+        Status_Text.Name,
+    ],
+    UI.HeaderInfo : {
+        TypeName : '{i18n>FamiliaDeProducto}',
+        TypeNamePlural : '{i18n>FamiliaDeProductos}',
+    },
+
+
+    
 );
 
-annotate service.Status.Status_Text with @(
-    UI.SelectionFields #filterBarMacro : [
-    ]
-);
+
 

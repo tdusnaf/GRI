@@ -28,7 +28,7 @@ entity ProductTypes
 {
     key ID : UUID;
     Area : String(100);
-    productTypes_Text : Composition of many {
+    ProductTypes_Text : Composition of many {
         key ID : UUID;    
         LangCode : Association to LangCode;
         Name : String(200);
@@ -40,10 +40,9 @@ entity Status
 {
     key ID : UUID; 
     Status_Text : Composition of many {
-        key ID : UUID;
-        status : Association to one Status;
+        key ID : UUID;        
         LangCode : Association to LangCode;
-        StatusName : String(100);
+        Name : String(100);
     }   
 }
 

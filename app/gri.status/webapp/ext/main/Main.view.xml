@@ -14,7 +14,7 @@
         <VBox id="a" fitContainer="true">
             <smartfilterbar:SmartFilterBar 
                 id="smartFilterBar" 
-                entitySet="Status" 
+                entitySet="gristatus" 
                 persistencyKey="SmartFilter_Explored" 
                 enableBasicSearch="true">
 
@@ -25,14 +25,14 @@
 
             <smartTable:SmartTable 
                 id="LineItemsSmartTable" 
-                entitySet="Status" 
+                entitySet="gristatus" 
                 smartFilterId="smartFilterBar" 
                 tableType="Table"
                 enableExport="true"
                 beforeExport="onBeforeExport"
                 useVariantManagement="true"
                 useTablePersonalisation="true"
-                header="Aerolineas"
+                header="Estados"
                 showRowCount="true"
                 persistencyKey="smartKey"
                 enableAutoBinding="true"

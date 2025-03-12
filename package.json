@@ -28,8 +28,7 @@
     "generate-entry-point": "dev-cap-tools gen-entrypoint",
     "cds-watch": "cds watch --open",
     "watch-gri.productfamily": "cds watch --open gri.productfamily/webapp/index.html?sap-ui-xx-viewCache=false",
-    "watch-gri.status": "cds watch --open gri.status/webapp/index.html?sap-ui-xx-viewCache=false",
-    "watch-gri.estadosdocumentacion": "cds watch --open gri.estadosdocumentacion/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-gri.status": "cds watch --open gri.status/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "sql": {
@@ -56,7 +55,6 @@
   "lcap": true,
   "sapux": [
     "app/gri.productfamily",
-    "app/gri.status",
-    "app/gri.estadosdocumentacion"
+    "app/gri.status"
   ]
 }
