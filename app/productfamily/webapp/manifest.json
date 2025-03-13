@@ -1,0 +1,155 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "com.gri.herramientaaprovisionamiento.productfamily",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:lrop",
+      "version": "1.16.5",
+      "toolsId": "53404943-7f20-4ca6-b0b4-cd607f0433b2"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/service/GRISvcs/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.133.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.fe.templates": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.gri.herramientaaprovisionamiento.productfamily.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      },
+      "@i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      }
+    },
+    "resources": {
+      "css": []
+    },
+    "routing": {
+      "config": {},
+      "routes": [
+        {
+          "pattern": ":?query:",
+          "name": "ProductFamilyList",
+          "target": "ProductFamilyList"
+        },
+        {
+          "pattern": "ProductFamily({key}):?query:",
+          "name": "ProductFamilyObjectPage",
+          "target": "ProductFamilyObjectPage"
+        }
+      ],
+      "targets": {
+        "ProductFamilyList": {
+          "type": "Component",
+          "id": "ProductFamilyList",
+          "name": "sap.fe.templates.ListReport",
+          "options": {
+            "settings": {
+              "contextPath": "/ProductFamily",
+              "variantManagement": "Page",
+              "navigation": {
+                "ProductFamily": {
+                  "detail": {
+                    "route": "ProductFamilyObjectPage"
+                  }
+                }
+              },
+              "controlConfiguration": {
+                "@com.sap.vocabularies.UI.v1.LineItem": {
+                  "tableSettings": {
+                    "type": "ResponsiveTable"
+                  }
+                }
+              },
+              "initialLoad": "Enabled"
+            }
+          }
+        },
+        "ProductFamilyObjectPage": {
+          "type": "Component",
+          "id": "ProductFamilyObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "editableHeaderContent": false,
+              "contextPath": "/ProductFamily",
+              "navigation": {},
+              "controlConfiguration": {
+                "texts/@com.sap.vocabularies.UI.v1.LineItem#Texts": {
+                  "tableSettings": {
+                    "type": "ResponsiveTable",
+                    "creationMode": {
+                      "createAtEnd": true,
+                      "inlineCreationRowsHiddenInEditMode": true,
+                      "name": "Inline"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "transactional"
+  }
+}

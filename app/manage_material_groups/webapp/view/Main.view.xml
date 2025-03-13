@@ -1,0 +1,30 @@
+<mvc:View controllerName="com.gri.herramientaaprovisionamiento.managematerialgroups.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+
+    <smartTable:SmartTable 
+                id="LineItemsSmartTable" 
+                entitySet="" 
+                smartFilterId="smartFilterBar" 
+                tableType="Table"
+                enableExport="true"
+                beforeExport="onBeforeExport"
+                useVariantManagement="true"
+                useTablePersonalisation="true"
+                header="Estados"
+                showRowCount="true"
+                persistencyKey="smartKey"
+                enableAutoBinding="true"
+                showFullScreenButton="true"
+                enableAutoColumnWidth="true"
+                app:useSmartToggle="true"
+                >                
+
+                <smartTable:layoutData>
+                    <FlexItemData id="ae" growFactor="1" baseSize="0%" />
+                </smartTable:layoutData>
+
+            </smartTable:SmartTable>
+    </Page>
+</mvc:View>

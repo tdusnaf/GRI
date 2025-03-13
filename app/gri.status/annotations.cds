@@ -34,7 +34,7 @@ annotate service.Status with @(
         },
         {
             $Type : 'UI.DataField',
-            Value : Status_Text. ,
+            Value : Status_Text.Name ,
             Label : '{i18n>Nombre}',
         },
     ],
