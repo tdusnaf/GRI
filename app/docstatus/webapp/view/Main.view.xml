@@ -11,18 +11,18 @@
     <f:DynamicPage id="dynamicPageId" headerExpanded="true" toggleHeaderOnTitleClick="true">
 			<!-- DynamicPage Title -->
 			<f:title>
-				<f:DynamicPageTitle>
+				<f:DynamicPageTitle id="Tit">
 					<f:heading>
-						<Title text="{i18n>title}"/>
+						<Title id="Tit2" text="{i18n>title}"/>
 					</f:heading>
 					<f:expandedContent>
-						<Label text="This is a subheading"/>
+						<Label id="Tit3" text="This is a subheading"/>
 					</f:expandedContent>
 					<f:snappedContent>
-						<Label text="This is a subheading"/>
+						<Label id="Tit4" text="This is a subheading"/>
 					</f:snappedContent>
 					<f:snappedTitleOnMobile>
-						<Title text="This is a subheading"/>
+						<Title id="Tit5" text="This is a subheading"/>
 					</f:snappedTitleOnMobile>
 					<f:content>
 					</f:content>					
@@ -31,7 +31,7 @@
 			<!-- DynamicPage Header -->
 			<f:header>
              <!-- Smart filter bar -->
-                    <f:DynamicPageHeader pinnable="true">
+                    <f:DynamicPageHeader id="A" pinnable="true">
 
                 <!-- Barra de busqueda -->                     
 
@@ -41,6 +41,7 @@
                         entitySet="Status"> 
                         <sfb:controlConfiguration>
                             <sfb:ControlConfiguration
+								id="CC"
                                 key="Name"
                                 visibleInAdvancedArea="true" />
                         </sfb:controlConfiguration>
@@ -66,10 +67,12 @@
                     enableAutoBinding="true" class="sapUiResponsiveContentPadding" 
                     enableAutoColumnWidth="true"
                     editTogglable="true" 
-                    app:useSmartToggle="true"> 
+                    app:useSmartToggle="true"
+					
+					> 
                     
 				<smartTable:layoutData>
-					<FlexItemData growFactor="1" baseSize="0%"/>
+					<FlexItemData id="FID" growFactor="1" baseSize="0%"/>
 				</smartTable:layoutData>
 			</smartTable:SmartTable>
                                    
