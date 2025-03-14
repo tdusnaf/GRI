@@ -14,7 +14,7 @@
         <VBox id="a" fitContainer="true">
             <smartfilterbar:SmartFilterBar 
                 id="smartFilterBar" 
-                entitySet="" 
+                entitySet="Status" 
                 persistencyKey="SmartFilter_Explored" 
                 enableBasicSearch="true">
 
@@ -25,7 +25,7 @@
 
             <smartTable:SmartTable 
                 id="LineItemsSmartTable" 
-                entitySet="" 
+                entitySet="Status" 
                 smartFilterId="smartFilterBar" 
                 tableType="Table"
                 enableExport="true"

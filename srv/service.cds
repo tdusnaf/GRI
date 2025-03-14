@@ -27,11 +27,13 @@ extend service GRIProductFamilyService {
 
 service GRIProductTypeService {
     @odata.draft.enabled
-    entity ProductType as projection on my.ProductTypes;    
+    entity ProductTypes as projection on my.ProductTypes;    
 };
+annotate GRI.ProductTypes with @fiori.draft.enabled;
 
 service GRIStatus {
     @odata.draft.enabled
     entity Status as projection on my.Status; 
 };
+annotate GRI.Status with @fiori.draft.enabled;
 

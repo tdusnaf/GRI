@@ -1,1 +1,9 @@
-ID,locale,Name
+ID_texts,ID,Name,locale
+1,a1b2c3d4-e89b-12d3-a456-426614174000,Pending,en
+2,a1b2c3d4-e89b-12d3-a456-426614174000,Pendiente,es
+3,a1b2c3d4-e89b-12d3-a456-426614174001,Solved,en
+4,a1b2c3d4-e89b-12d3-a456-426614174001,Resuelto,es
+5,a1b2c3d4-e89b-12d3-a456-426614174002,In Progress,en
+6,a1b2c3d4-e89b-12d3-a456-426614174002,En Progreso,es
+7,a1b2c3d4-e89b-12d3-a456-426614174003,Aprobado,es
+8,a1b2c3d4-e89b-12d3-a456-426614174003,Approved,en
