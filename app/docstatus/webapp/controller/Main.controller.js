@@ -12,8 +12,10 @@ sap.ui.define([
 			const oRouter = this.getOwnerComponent().getRouter();
 			oRouter.navTo("Status_Texts", {
 				/* ID : window.encodeURIComponent(oItem.getBindingContext().getPath().substring(1))  */
-				ID : window.encodeURIComponent(oItem.getBindingContext().getProperty("ID")) 
-			});            
+				ID : window.encodeURIComponent(oItem.getBindingContext().getProperty("ID"))
+                
+			}); 
+                       
 
            /*  const oRouter = this.getOwnerComponent().getRouter();
             var object = oEvent.getSource().getParent().getBindingContext().getObject();
