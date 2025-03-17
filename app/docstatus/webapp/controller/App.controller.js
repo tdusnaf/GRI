@@ -5,6 +5,8 @@ sap.ui.define([
 
   return BaseController.extend("herramientaaprovisionamiento.docstatus.controller.App", {
       onInit() {
-      }
+        
+      },
+      
   });
 });

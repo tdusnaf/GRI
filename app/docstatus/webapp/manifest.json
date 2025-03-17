@@ -96,12 +96,23 @@
           "target": [
             "TargetMain"
           ]
+        },
+        {
+          "name": "Status_Texts",
+          "pattern": "Texts/{ID}",
+          "target": [
+            "Status_Texts"
+          ]
         }
       ],
       "targets": {
         "TargetMain": {
           "id": "Main",
           "name": "Main"
+        },
+        "Status_Texts": {
+          "id": "Texts",
+          "name": "Texts"
         }
       }
     },

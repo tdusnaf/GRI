@@ -90,6 +90,85 @@ annotate service.Status with @(
 );
 
 annotate service.Status.texts with @(
+    UI.FieldGroup #GeneratedGroup2 : {
+        $Type : 'UI.FieldGroupType',
+        Data : [
+            {
+                $Type : 'UI.DataField',
+                Label : '{i18n>ID}',
+                Value : ID,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : '{i18n>Nombre}',
+                Value : Name,
+            },
+        ],
+    },
+    UI.Facets : [
+        {
+            $Type : 'UI.ReferenceFacet',
+            ID : 'GeneratedFacet1',
+            Label : 'General Information',
+            Target : '@UI.FieldGroup#GeneratedGroup2',
+        },        
+    ],
+    UI.LineItem : [
+        {
+            $Type : 'UI.DataField',
+            Label : '{i18n>ID}',
+            Value : ID,
+        },
+         {
+            $Type : 'UI.DataField',
+            Label : '{i18n>Estado}',
+            Value : locale,
+        },
+        {
+            $Type : 'UI.DataField',
+            Label : '{i18n>Estado}',
+            Value : Name,
+        },
+    ],
+    UI.HeaderInfo : {
+        Title : {
+            $Type : 'UI.DataField',
+            Value : Name,
+        },
+        TypeName : '',
+        TypeNamePlural : '',
+        Description : {
+            $Type : 'UI.DataField',
+            Value : ID,
+        },
+    },
+    
+    UI.SelectionFields : [
+        ID,
+    ],
+);
+
+/* annotate service.Status.texts with @(
+    UI.FieldGroup #GeneratedGroup2 : {
+        $Type : 'UI.FieldGroupType',
+        Data : [
+            {
+                $Type : 'UI.DataField',
+                Label : '{i18n>ID}',
+                Value : ID,
+            },
+             {
+                $Type : 'UI.DataField',
+                Label : '{i18n>Nombre}',
+                Value : locale,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : '{i18n>Nombre}',
+                Value : Name,
+            },
+        ],
+    },
     UI.LineItem #Texts : [
         {
             $Type : 'UI.DataField',
@@ -102,7 +181,7 @@ annotate service.Status.texts with @(
             Label : '{i18n>Nombre}',
         },
     ]
-);
+); */
 
 annotate service.Status with {
     Name @Common.Label : 'Name'
