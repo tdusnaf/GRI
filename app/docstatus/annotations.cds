@@ -129,19 +129,7 @@ annotate service.Status.texts with @(
             Label : '{i18n>Estado}',
             Value : Name,
         },
-    ],
-    UI.HeaderInfo : {
-        Title : {
-            $Type : 'UI.DataField',
-            Value : Name,
-        },
-        TypeName : '',
-        TypeNamePlural : '',
-        Description : {
-            $Type : 'UI.DataField',
-            Value : ID,
-        },
-    },
+    ],    
     
     UI.SelectionFields : [
         ID,
@@ -183,7 +171,7 @@ annotate service.Status.texts with @(
     ]
 ); */
 
-annotate service.Status with {
+/* annotate service.Status with {
     Name @Common.Label : 'Name'
 };
-
+ */

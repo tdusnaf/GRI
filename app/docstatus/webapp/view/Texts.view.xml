@@ -38,8 +38,8 @@ xmlns:f="sap.f"
                         <sfb:controlConfiguration>
                             <sfb:ControlConfiguration
 								id="C"
-                                key="Name"
-                                visibleInAdvancedArea="true" />
+                                key="ID"
+                                visibleInAdvancedArea="false" />
                         </sfb:controlConfiguration>
                     </sfb:SmartFilterBar>   
 
@@ -50,7 +50,7 @@ xmlns:f="sap.f"
                 	
                 <smartTable:SmartTable 
                     id="TextsSmartTable" 
-                    entitySet="Status_texts" 
+                    entitySet="Status_texts"					
                     smartFilterId="smartFilterBar2" 
                     tableType="Table" 
                     enableExport="true" 
@@ -60,11 +60,12 @@ xmlns:f="sap.f"
                     header="Estados" 
                     showRowCount="true" 
                     persistencyKey="smartKey" 
-                    enableAutoBinding="true" class="sapUiResponsiveContentPadding" 
+                    enableAutoBinding="true" 
+					tableBindingPath="texts"					
                     enableAutoColumnWidth="true"
                     editTogglable="true" 
                     app:useSmartToggle="true"
-					
+										
 					> 
                     
 				<smartTable:layoutData>
